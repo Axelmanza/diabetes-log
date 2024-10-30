@@ -1,0 +1,7 @@
+{
+  "name": "DiabetesLog",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
