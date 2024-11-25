@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   IonCard,
   IonCardContent,
@@ -18,11 +18,12 @@ import {
     IonCard,
     IonCardHeader,
     IonCardTitle,
-    IonCardSubtitle,
     IonCardContent,
   ],
 })
 export class FoodCardComponent implements OnInit {
+  @Input() foodModel: any;
+
   constructor() {}
 
   ngOnInit() {}

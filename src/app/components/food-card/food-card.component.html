@@ -1,15 +1,18 @@
-<ion-card>
+<ion-card style="height: auto">
   <img
+    style="height: 80px"
     alt="Silhouette of mountains"
     src="https://ionicframework.com/docs/img/demos/card-media.png"
   />
   <ion-card-header>
-    <ion-card-title>Card Title</ion-card-title>
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    <ion-card-title>{{ foodModel.name | titlecase }}</ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
-    Here's a small text description for the card content. Nothing more, nothing
-    less.
+  <ion-card-content style="word-wrap: break-word; display: block">
+    Este componente sirve para calcular las raxcion de cada alimento añadido a
+    la base de datos por el usuario, puede basarlo en la etiqueta o en una
+    referencia proporcionada en algun otro lugar. Tambien da un vistazo de
+    cuantas uds de insulina ha de inyetarse el usuario para la cantidad de
+    alimento ingerido.
   </ion-card-content>
 </ion-card>
