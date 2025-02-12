@@ -1,0 +1,18 @@
+<!-- Meal Log Module -->
+<div class="meal-log-container">
+  <h2>Meal Log</h2>
+  <form (submit)="logMeal()">
+    <select [(ngModel)]="selectedFood">
+      <option *ngFor="let food of foods" [ngValue]="food">
+        {{ food.name }}
+      </option>
+    </select>
+    <button type="submit">Add Meal</button>
+  </form>
+  <ul>
+    <li *ngFor="let meal of mealLogs">
+      {{ meal.foods.map(f => f.name).join(', ') }} - Total:
+      {{ meal.totalCarbohydrates }}g HC
+    </li>
+  </ul>
+</div>

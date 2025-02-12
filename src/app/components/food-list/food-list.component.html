@@ -1,0 +1,9 @@
+<!-- Food List Module -->
+<div class="food-list-container">
+  <h2>Food List</h2>
+  <ul>
+    <li *ngFor="let food of foods">
+      {{ food.name }} - {{ food.carbohydratesPerPortion }}g HC
+    </li>
+  </ul>
+</div>

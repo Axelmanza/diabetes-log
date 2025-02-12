@@ -6,7 +6,7 @@ import {
   IonToolbar,
 } from '@ionic/angular/standalone';
 import { FoodCardComponent } from '../components/food-card/food-card.component';
-import { FoodModel } from '../interfaces/food.interface';
+import { FoodModel } from '../interfaces/food.model';
 
 @Component({
   selector: 'app-tab1',

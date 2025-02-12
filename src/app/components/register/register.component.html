@@ -1,0 +1,15 @@
+<!-- Register Module -->
+<div class="register-container">
+  <h2>Register</h2>
+  <form (submit)="register()">
+    <input type="text" [(ngModel)]="name" placeholder="Name" required />
+    <input type="email" [(ngModel)]="email" placeholder="Email" required />
+    <input
+      type="password"
+      [(ngModel)]="password"
+      placeholder="Password"
+      required
+    />
+    <button type="submit">Register</button>
+  </form>
+</div>
