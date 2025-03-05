@@ -11,8 +11,7 @@
   </form>
   <ul>
     <li *ngFor="let meal of mealLogs">
-      {{ meal.foods.map(f => f.name).join(', ') }} - Total:
-      {{ meal.totalCarbohydrates }}g HC
+      {{ formatMealFoods(meal) }} - Total: {{ meal.totalCarbohydrates }}g HC
     </li>
   </ul>
 </div>
