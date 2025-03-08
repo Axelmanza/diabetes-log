@@ -1,57 +1,102 @@
-:host {
+$primary-color: #e0c66c; // Amarillo apagado
+$hover-color: #d4b45a;
+$text-color: #4a4a4a;
+$button-color: #f5b700;
+$button-hover: #e0a600;
+$register-color: #a66c00;
+$border-radius: 12px;
+
+.login-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background: linear-gradient(
-    135deg,
-    #007aff,
-    #4a90e2
-  ); // Nice gradient background
+  background-color: #f7f7f7;
 
-  .login-container {
-    width: 90%;
-    max-width: 400px;
+  .login-box {
+    background-color: $primary-color;
     padding: 2rem;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: $border-radius;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 100%;
+    max-width: 350px;
 
-    h1 {
-      font-size: 1.8rem;
-      color: #333;
+    h2 {
+      color: $text-color;
       margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
 
-    ion-item {
-      --background: transparent;
-      --border-radius: 10px;
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
       margin-bottom: 1rem;
-    }
 
-    ion-input {
-      --padding-start: 15px;
+      label {
+        font-size: 0.9rem;
+        color: $text-color;
+        margin-bottom: 0.3rem;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: $border-radius;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+
+        &:focus {
+          border-color: $hover-color;
+          outline: none;
+        }
+      }
     }
 
     .login-button {
-      width: 100%;
-      height: 45px;
-      border-radius: 10px;
-      font-size: 1rem;
+      background: linear-gradient(135deg, #f5b700, #e0a600);
+      color: white;
       font-weight: bold;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
 
-      &.ion-activated {
-        transform: scale(0.98);
+      &:hover {
+        background: linear-gradient(135deg, #e0a600, #c98f00);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(1px);
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
       }
     }
 
     .register-link {
-      margin-top: 1rem;
       font-size: 0.9rem;
-      color: #007aff;
-      text-decoration: none;
+      margin-top: 1rem;
+      color: $text-color;
+
+      .register-button {
+        color: $register-color;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: $border-radius;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($register-color, 10%);
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

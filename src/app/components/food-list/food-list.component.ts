@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Food } from 'src/app/interfaces/food.model';
+import foodList, { Food } from 'src/app/interfaces/food.model';
 import { FoodService } from 'src/app/shared/food.service';
 
 @Component({
@@ -12,13 +12,25 @@ import { FoodService } from 'src/app/shared/food.service';
   template: ``,
 })
 export class FoodListComponent implements OnInit {
-  foods: Food[] = [];
+  foods: Food[] = []; // Array de alimentos
 
   constructor(private foodService: FoodService) {}
 
   ngOnInit() {
     this.foodService.getFoods().subscribe((data) => {
-      this.foods = data;
+      this.foods = foodList;
     });
+  }
+
+  addFood() {
+    const newFood = {
+      name: 'Nuevo Alimento',
+      carbohydratesPerPortion: 0,
+      calories: 0,
+      protein: 0,
+      fat: 0,
+    };
+
+    this.foods.push(newFood);
   }
 }
